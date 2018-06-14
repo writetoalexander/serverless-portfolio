@@ -2,3 +2,5 @@
 .env
 /lambda/node_modules
 package-lock.json
+
+config/keys.js

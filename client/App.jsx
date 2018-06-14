@@ -16,15 +16,18 @@ export default class App extends React.Component {
   }
 
   componentDidMount(){
+    console.log('something happening')
     this.getAppData()
   }
 
   getAppData() {
 
-    axios.get(/*YOUR LAMBDA FCN HERE*/)
+    axios.get('https://kpuqymwzal.execute-api.us-east-1.amazonaws.com/enableCors/getDrives')
          .then(resp => {
+           console.log('resp is ', resp.data)
            this.setState({chillData: resp.data})
          })
+
   }
 
   render() {
@@ -48,7 +51,7 @@ export default class App extends React.Component {
 
              <Route
                exact path="/portfolio"
-               render={ routeProps =>
+               render={  routeProps =>
                  <Portfolio {...routeProps}
                    chillData={this.state.chillData}
                  /> }
