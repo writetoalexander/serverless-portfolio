@@ -4,6 +4,7 @@ import { Route } from 'react-router-dom';
 import styled from 'styled-components';
 import Home from './components/Home';
 import Portfolio from './components/Portfolio';
+import descriptions from '../descriptions/descriptions.js'
 import Menu from './components/Menu';
 
 export default class App extends React.Component {
@@ -11,6 +12,7 @@ export default class App extends React.Component {
     super(props);
     this.state = {
       chillData: [],
+      descriptions: descriptions
     }
     this.getAppData = this.getAppData.bind(this)
   }
@@ -26,7 +28,7 @@ export default class App extends React.Component {
          .then(resp => {
            console.log('resp is ', resp.data)
            this.setState({chillData: resp.data})
-         })
+         }, console.log('state is ', this.state))
 
   }
 
@@ -51,9 +53,9 @@ export default class App extends React.Component {
 
              <Route
                exact path="/portfolio"
-               render={  routeProps =>
+               render={routeProps =>
                  <Portfolio {...routeProps}
-                   chillData={this.state.chillData}
+                   chillData={this.state.chillData} descriptions={this.state.descriptions}
                  /> }
              />
          </AppContent>

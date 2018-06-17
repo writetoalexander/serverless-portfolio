@@ -5,6 +5,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const extractSass = new ExtractTextPlugin({
   filename: 'styles.css'
 });
+const ASSET_DIR = path.join(__dirname, '/client/assets')
 
 module.exports = {
   entry: ['babel-polyfill', './client/index.js'],
@@ -24,6 +25,7 @@ module.exports = {
       }
     }, {
       test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2)$/,
+      include: ASSET_DIR,
       use: {
         loader: 'url-loader',
         options: {
