@@ -12,7 +12,10 @@ export default class App extends React.Component {
     super(props);
     this.state = {
       chillData: [],
-      descriptions: descriptions
+      descriptions: descriptions,
+      showMarinerModal: false,
+      showCodeChatModal: false,
+      showBrewHopModal: false
     }
     this.getAppData = this.getAppData.bind(this)
   }
@@ -30,6 +33,12 @@ export default class App extends React.Component {
            this.setState({chillData: resp.data})
          }, console.log('state is ', this.state))
 
+  }
+  renderMarinerModal() {
+    console.log('click happening')
+    this.setState({
+      showMarinerModal: true
+    })
   }
 
   render() {
@@ -55,7 +64,10 @@ export default class App extends React.Component {
                exact path="/portfolio"
                render={routeProps =>
                  <Portfolio {...routeProps}
-                   chillData={this.state.chillData} descriptions={this.state.descriptions}
+                   chillData={this.state.chillData} 
+                   descriptions={this.state.descriptions}
+                   showMarinerModal={this.state.showMarinerModal}
+                   renderMarinerModal={this.renderMarinerModal.bind(this)}
                  /> }
              />
          </AppContent>
