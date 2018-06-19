@@ -22,7 +22,7 @@ exports.handler = (event, context, callback) => {
           return(err)
         } else {
           console.log('in else ')
-          //console.log('res.data.items ', res.data.items)
+          console.log('res.data.items ', res.data.items)
           let filteredResults = res.data.items.map( (el) => {
               return {
                         "title": el.title,

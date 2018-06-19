@@ -15,7 +15,8 @@ export default class App extends React.Component {
       descriptions: descriptions,
       showMarinerModal: false,
       showCodeChatModal: false,
-      showBrewHopModal: false
+      showBrewHopModal: false,
+      imageTracker: 0
     }
     this.getAppData = this.getAppData.bind(this)
   }
@@ -34,12 +35,31 @@ export default class App extends React.Component {
          }, console.log('state is ', this.state))
 
   }
+
+  dismissModalHandler() {
+    this.setState({
+      showMarinerModal: false,
+      showCodeChatModal: false,
+      showBrewHopModal: false
+    })
+  }
+
   renderMarinerModal() {
     console.log('click happening')
     this.setState({
       showMarinerModal: true
     })
   }
+
+  increaseImageTracker() {
+    console.log('this.state.imageTracker is ', this.state.imageTracker)
+    if (this.state.imageTracker !== 2) {
+      this.setState({
+        imageTracker: this.state.imageTracker + 1
+      })
+    }
+  }
+
 
   render() {
     const AppContainer = styled.div`
@@ -67,7 +87,10 @@ export default class App extends React.Component {
                    chillData={this.state.chillData} 
                    descriptions={this.state.descriptions}
                    showMarinerModal={this.state.showMarinerModal}
+                   dismissModalHandler={this.dismissModalHandler.bind(this)}
                    renderMarinerModal={this.renderMarinerModal.bind(this)}
+                   increaseImageTracker={this.increaseImageTracker.bind(this)}
+                   imageTracker={this.state.imageTracker}
                  /> }
              />
          </AppContent>

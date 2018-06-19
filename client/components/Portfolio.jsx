@@ -35,22 +35,27 @@ const Description =styled.p`
 
 const Portfolio = (props) => (
   <div>
-    <MarinerModal chillData={props.chillData} isVisible={props.showMarinerModal}/>
-    <Backdrop>
+    <MarinerModal 
+      chillData={props.chillData} 
+      isVisible={props.showMarinerModal} 
+      dismissModalHandler={props.dismissModalHandler} 
+      increaseImageTracker={props.increaseImageTracker}
+      imageTracker={props.imageTracker}/>
+    <Backdrop dismissModal={props.dismissModalHandler}>
         <Title>Mariner</Title> 
         <Project>             
-            <Logo src={props.chillData[1].thumbnailLink} onClick={props.renderMarinerModal}></Logo>
+            <Logo src={props.chillData[3].thumbnailLink} onClick={props.renderMarinerModal}></Logo>
             <Description>{descriptions.mariner}</Description>         
         </Project>
       
         <Title>Code Chat</Title>
         <Project>
-          <Logo src={props.chillData[2].thumbnailLink}></Logo>
+          <Logo src={props.chillData[4].thumbnailLink}></Logo>
           <Description>{descriptions.codeChat}</Description>
         </Project>
         <Title>Brew Hop</Title>        
         <Project>
-          <Logo src={props.chillData[0].thumbnailLink}></Logo>
+          <Logo src={props.chillData[2].thumbnailLink}></Logo>
           <Description>{descriptions.brewHop}</Description>
         </Project>      
     </Backdrop>
