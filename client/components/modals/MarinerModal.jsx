@@ -3,10 +3,13 @@ import Backdrop from '../backdrop/Backdrop.jsx';
 import styled from 'styled-components';
 
 const ModalContainer = styled.div`
-  position: relative;
+  position: absolute;
   width: 766px;
   height: 829px;
-  left: 337px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
   top: 105px;
   border-radius: 5px;
   background-color: #448EB8;
