@@ -16,7 +16,8 @@ export default class App extends React.Component {
       showMarinerModal: false,
       showCodeChatModal: false,
       showBrewHopModal: false,
-      imageTracker: 0
+      imageTracker: 0,
+      modalImages: []
     }
     this.getAppData = this.getAppData.bind(this)
   }
@@ -41,14 +42,28 @@ export default class App extends React.Component {
       showMarinerModal: false,
       showCodeChatModal: false,
       showBrewHopModal: false
-    })
+    });
   }
 
   renderMarinerModal() {
-    console.log('click happening')
+    console.log('click happening');
     this.setState({
       showMarinerModal: true
-    })
+    });
+  }
+
+  renderCodeChatModal() {
+    console.log('cc click happening');
+    this.setState({
+      showCodeChatModal: true
+    });
+  }
+
+  renderBrewHopModal() {
+    console.log('bh click happening')
+    this.setState({
+      showBrewHopModal: true
+    });
   }
 
   increaseImageTracker() {
@@ -56,7 +71,7 @@ export default class App extends React.Component {
     if (this.state.imageTracker !== 2) {
       this.setState({
         imageTracker: this.state.imageTracker + 1
-      })
+      });
     }
   }
 
@@ -65,9 +80,11 @@ export default class App extends React.Component {
     if(this.state.imageTracker !== 0) {
       this.setState({
         imageTracker: this.state.imageTracker - 1
-      })
+      });
     }
   }
+
+
 
 
   render() {
@@ -96,8 +113,12 @@ export default class App extends React.Component {
                    chillData={this.state.chillData} 
                    descriptions={this.state.descriptions}
                    showMarinerModal={this.state.showMarinerModal}
+                   showCodeChatModal={this.state.showCodeChatModal}
+                   showBrewHopModal={this.state.showBrewHopModal}
                    dismissModalHandler={this.dismissModalHandler.bind(this)}
                    renderMarinerModal={this.renderMarinerModal.bind(this)}
+                   renderCodeChatModal={this.renderCodeChatModal.bind(this)}
+                   renderBrewHopModal={this.renderBrewHopModal.bind(this)}
                    increaseImageTracker={this.increaseImageTracker.bind(this)}
                    decreaseImageTracker={this.decreaseImageTracker.bind(this)}
                    imageTracker={this.state.imageTracker}

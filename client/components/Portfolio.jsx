@@ -1,8 +1,10 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
 import styled from 'styled-components';
-import descriptions from '../../descriptions/descriptions.js'
-import MarinerModal from './modals/MarinerModal.jsx'
+import descriptions from '../../descriptions/descriptions.js';
+import MarinerModal from './modals/MarinerModal.jsx';
+import CodeChatModal from './modals/CodeChatModal.jsx';
+import BrewHopModal from './modals/BrewHopModal.jsx';
 
 const Backdrop = styled.div`
   background-color: #D1D1D1;
@@ -44,6 +46,15 @@ const Portfolio = (props) => {
         increaseImageTracker={props.increaseImageTracker}
         decreaseImageTracker={props.decreaseImageTracker}
         imageTracker={props.imageTracker}/>
+      <CodeChatModal
+        isVisible={props.showCodeChatModal}
+        dismissModalHandler={props.dismissModalHandler}
+      />
+      <BrewHopModal
+        isVisible={props.showBrewHopModal}
+        dismissModalHandler={props.dismissModalHandler}  
+      />  
+
       <Backdrop dismissModal={props.dismissModalHandler}>
           <Title>Mariner</Title> 
           <Project>             
@@ -53,12 +64,12 @@ const Portfolio = (props) => {
         
           <Title>Code Chat</Title>
           <Project>
-            <Logo src={props.chillData[4].thumbnailLink}></Logo>
+            <Logo src={props.chillData[4].thumbnailLink} onClick={props.renderCodeChatModal}></Logo>
             <Description>{descriptions.codeChat}</Description>
           </Project>
           <Title>Brew Hop</Title>        
           <Project>
-            <Logo src={props.chillData[2].thumbnailLink}></Logo>
+            <Logo src={props.chillData[2].thumbnailLink} onClick={props.renderBrewHopModal}></Logo>
             <Description>{descriptions.brewHop}</Description>
           </Project>      
       </Backdrop>
