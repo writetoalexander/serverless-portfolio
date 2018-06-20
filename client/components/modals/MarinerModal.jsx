@@ -36,6 +36,11 @@ const Next = styled.a`
   display: inline;
   margin-bottom: 100px;
   margin-left: 90%;
+`
+
+const Prev = styled.a`
+  display: inline;
+  magin-bottom: 100px;
 ` 
 
 
@@ -54,6 +59,7 @@ const Modal = (props) => (
         style={{
           opacity: props.isVisible ? '1' : '0'
         }}>
+        <Prev onClick={() => {props.decreaseImageTracker()}}>Prev</Prev>
         <Next onClick={() => {props.increaseImageTracker()}}>Next</Next>
         <MarinerImage src={images[props.imageTracker]}>
         </MarinerImage>

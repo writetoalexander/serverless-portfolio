@@ -60,6 +60,15 @@ export default class App extends React.Component {
     }
   }
 
+  decreaseImageTracker() {
+    console.log('this.state.imageTracker is ', this.state.imageTracker)
+    if(this.state.imageTracker !== 0) {
+      this.setState({
+        imageTracker: this.state.imageTracker - 1
+      })
+    }
+  }
+
 
   render() {
     const AppContainer = styled.div`
@@ -90,6 +99,7 @@ export default class App extends React.Component {
                    dismissModalHandler={this.dismissModalHandler.bind(this)}
                    renderMarinerModal={this.renderMarinerModal.bind(this)}
                    increaseImageTracker={this.increaseImageTracker.bind(this)}
+                   decreaseImageTracker={this.decreaseImageTracker.bind(this)}
                    imageTracker={this.state.imageTracker}
                  /> }
              />
