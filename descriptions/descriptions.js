@@ -1,7 +1,8 @@
 const descriptions = {
-  mariner: 'This is a description for Mariner. This current description is for testing purposes. More to say later',
-  codeChat: 'This is a description for Harbour. This current description is for testing purposes. More to say later',
-  brewHop: 'This is a description for Brew Hop. This current description is for testing purposes. More to say later'
+  mariner: 'Mariner is a web application primarily focused on the needs of content producers for YouTube. It provides an easier way for users to engage with their audience. Upon login, video and comment data is instantly rendered within an intuitive interface. By expanding on the latest tools in sentiment analysis, Mariner gives users the ability to automatically narrow thousands of comments down to their respective tones.',
+  codeChat: 'A simple video conference tool specifically designed for code pairing in a remote environment. Editors like Floobits and Repl.it are incorporated into the UI, giving teams everything they need to run sessions from one location.',
+  brewHop: 'Consumer based application for beer enthusiasts to search and save breweries, beers, and styles',
+  aboutMe: 'As an engineer, I try to apply a sense of creativity and innovation to every step of the development process. Whether generating ideas about what an application can be or brainstorming about a system’s architecture, I make sure to always ask the questions that will lead me to create something unique and exciting.  I really enjoy applying agile and scrum practices to the project management aspect of software development. There’s often an extra sense of reward in discovering the various strengths across a team and striving to direct resources toward the best possible outcome for everyone involved.'
 }
 
 module.exports = descriptions
