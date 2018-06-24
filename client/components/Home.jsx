@@ -33,27 +33,65 @@ export default class Home extends React.Component {
       display: inline;   
     `
 
-    const Skills = styled.ul`
+    const SkillList = styled.ul`
+      max-width: 30% {
+        .flex-grid {
+          display: block
+        }
+      }
       list-style-type: none;
+      font-family: Open Sans;
+
     `
+
+    const Skills = styled.li`
+      display: inline-block;
+      padding: 2%;
+    `
+    const SkillTitle = styled.h1`
+      display: inline;
+      margin-right: 60%;
+      margin-left: 40%;
+      font-family: Open Sans;
+    `
+
+    const AboutMeTitle = styled.h1`
+      display: inline;
+      font-family: Open Sans;
+    `
+
+    const AboutMeDescription = styled.p`
+      font-family: Open Sans;
+    `
+
+    
+
 
     return (
       <HomeContainer>
         <ProfilePic src={Profile}/>
         <InfoContainer>
           <div>
-            <h1>About Me</h1>
-            <div>{descriptions.aboutMe}
-            </div>
+            <AboutMeTitle>About Me</AboutMeTitle>
+            <AboutMeDescription>{descriptions.aboutMe}</AboutMeDescription>
 
           </div>
           <div>
-            <h1>Skills</h1>  
-            <Skills>
-              <li>Javascript</li>
-              <li>React</li>
-              <li>Node.js</li>
-            </Skills>
+            <SkillTitle>Skills</SkillTitle>  
+            <SkillList>
+              <Skills>JavaScript </Skills>
+              <Skills>React </Skills>
+              <Skills>Webpack </Skills>
+              <Skills>Node.js </Skills>
+              <Skills>Redux </Skills>
+              <Skills>MOCHA </Skills>
+              <Skills>HTML </Skills>
+              <Skills>CSS </Skills>
+              <Skills>AWS </Skills>
+              
+
+               
+            </SkillList>
           </div>
         </InfoContainer>
       </HomeContainer>
