@@ -21,23 +21,45 @@ const Title = styled.h1`
   white-space: nowrap;
 `
 
+// const Project = styled.div`
+//   display: grid;
+//   grid-template-columns: 30% 70%;
+//   margin-bottom: 1em;
+//   margin-top: 1em;
+
+// `
+
 const Project = styled.div`
-  display: grid;
-  grid-template-columns: 30% 70%;
-  margin-bottom: 1em;
-  margin-top: 1em;
-
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1em;
 `
 
-const Logo = styled.img`
-  display: inline;  
+const Column = styled.div`
+  flex: 40%;
+  max-width: 45%;
+  padding: 1em;
+  @ media screen and (max-width: 200px) {
+    flex: 90%;
+    max-width: 90%;
+  }
+`
+
+const ColoumnImage = styled.img`
+  vertical-align: middle;
+`
+
+// const Logo = styled.img`
+//   display: inline;  
   
-`
-const Description =styled.p`
-  display: inline;
+// `
+const ColumnDescription = styled.p`
+ 
   margin-top: 1em;
   font-family: Open Sans;
   color: #4f4f4f;
+  vertical-align: middle;
+
 `
 
 
@@ -63,21 +85,31 @@ const Portfolio = (props) => {
 
       <Backdrop dismissModal={props.dismissModalHandler}>
           <Project>
-              <div>             
-                <Logo src={props.chillData[0].thumbnailLink} onClick={props.renderMarinerModal}></Logo>
-              </div>
-              <div>  
-                <Description>{descriptions.mariner}</Description>
-              </div>           
+            <Column>
+                          
+              <ColoumnImage src={props.chillData[0].thumbnailLink} onClick={props.renderMarinerModal}></ColoumnImage>
+            </Column>  
+            
+            <Column>  
+              <ColumnDescription>{descriptions.mariner}</ColumnDescription>
+            </Column>          
           </Project>
       
           <Project>
-            <Logo src={props.chillData[1].thumbnailLink} onClick={props.renderCodeChatModal}></Logo>
-            <Description>{descriptions.codeChat}</Description>
+            <Column>
+              <ColoumnImage src={props.chillData[1].thumbnailLink} onClick={props.renderCodeChatModal}></ColoumnImage>
+            </Column>
+            <Column>  
+              <ColumnDescription>{descriptions.codeChat}</ColumnDescription>
+            </Column> 
           </Project>    
           <Project>
-            <Logo src={props.chillData[2].thumbnailLink} onClick={props.renderBrewHopModal}></Logo>
-            <Description>{descriptions.brewHop}</Description>
+            <Column>
+              <ColoumnImage src={props.chillData[2].thumbnailLink} onClick={props.renderCodeChatModal}></ColoumnImage>
+            </Column>
+            <Column>  
+              <ColumnDescription>{descriptions.codeChat}</ColumnDescription>
+            </Column>             
           </Project>      
       </Backdrop>
     </div>
