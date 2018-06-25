@@ -1,8 +1,8 @@
 import React from 'react';
 import Backdrop from '../backdrop/Backdrop.jsx';
 import styled from 'styled-components';
-import Diagram from '../assets/CR.png';
-import HighLevel from '../assets/highLevel.png';
+import Diagram from '../assets/Comment-Retrieval.png';
+import HighLevel from '../assets/High-Level-Architecture.png';
 import Graph from '../assets/saGraph.png';
 
 const ModalContainer = styled.div`
@@ -15,7 +15,7 @@ const ModalContainer = styled.div`
   right: 0;
   top: 105px;
   border-radius: 5px;
-  background-color: #D2D2D2;
+  background-color: white;
   z-index: 500;
   transition: all 0.3s ease-out;
   -webkit-user-drag: element;

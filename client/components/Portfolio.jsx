@@ -21,13 +21,7 @@ const Title = styled.h1`
   white-space: nowrap;
 `
 
-// const Project = styled.div`
-//   display: grid;
-//   grid-template-columns: 30% 70%;
-//   margin-bottom: 1em;
-//   margin-top: 1em;
 
-// `
 
 const Project = styled.div`
   display: flex;
@@ -49,10 +43,7 @@ const ColoumnImage = styled.img`
   vertical-align: middle;
 `
 
-// const Logo = styled.img`
-//   display: inline;  
-  
-// `
+
 const ColumnDescription = styled.p`
  
   margin-top: 1em;
@@ -87,7 +78,7 @@ const Portfolio = (props) => {
           <Project>
             <Column>
                           
-              <ColoumnImage src={props.chillData[0].thumbnailLink} onClick={props.renderMarinerModal}></ColoumnImage>
+              <ColoumnImage src={props.chillData[9].thumbnailLink} onClick={props.renderMarinerModal}></ColoumnImage>
             </Column>  
             
             <Column>  
@@ -97,7 +88,7 @@ const Portfolio = (props) => {
       
           <Project>
             <Column>
-              <ColoumnImage src={props.chillData[1].thumbnailLink} onClick={props.renderCodeChatModal}></ColoumnImage>
+              <ColoumnImage src={props.chillData[10].thumbnailLink} onClick={props.renderCodeChatModal}></ColoumnImage>
             </Column>
             <Column>  
               <ColumnDescription>{descriptions.codeChat}</ColumnDescription>
@@ -105,7 +96,7 @@ const Portfolio = (props) => {
           </Project>    
           <Project>
             <Column>
-              <ColoumnImage src={props.chillData[2].thumbnailLink} onClick={props.renderCodeChatModal}></ColoumnImage>
+              <ColoumnImage src={props.chillData[11].thumbnailLink} onClick={props.renderCodeChatModal}></ColoumnImage>
             </Column>
             <Column>  
               <ColumnDescription>{descriptions.codeChat}</ColumnDescription>

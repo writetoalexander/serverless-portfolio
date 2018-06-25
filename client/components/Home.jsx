@@ -83,9 +83,9 @@ export default class Home extends React.Component {
             <SkillList>
               <Skills>JavaScript </Skills>
               <Skills>React </Skills>
-              <Skills>Webpack </Skills>
-              <Skills>Node.js </Skills>
               <Skills>Redux </Skills>
+              <Skills>Node.js </Skills>
+              <Skills>Webpack </Skills>
               <Skills>MOCHA </Skills>
               <Skills>HTML </Skills>
               <Skills>CSS </Skills>

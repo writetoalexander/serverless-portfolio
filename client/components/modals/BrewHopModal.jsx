@@ -1,9 +1,7 @@
 import React from 'react';
 import Backdrop from '../backdrop/Backdrop.jsx';
 import styled from 'styled-components';
-import HighLevel from '../assets/highLevel.png';
-import Graph from '../assets/saGraph.png';
-import BrewHop from '../assets/brew-hop-diagram.png';
+import BrewHop from '../assets/Brew-Hop.png';
 
 const ModalContainer = styled.div`
   position: absolute;
@@ -15,7 +13,7 @@ const ModalContainer = styled.div`
   right: 0;
   top: 105px;
   border-radius: 5px;
-  background-color: #D2D2D2;
+  background-color: white;
   z-index: 500;
   transition: all 0.3s ease-out;
   -webkit-user-drag: element;
