@@ -47,13 +47,23 @@ const ColoumnImage = styled.img`
   }
 `
 
+const FirstWord = styled.p`
+  margin-top: 1em;
+  display: inline;
+  font-family: Open Sans;
+  font-weight: 700;
+  color: #4f4f4f;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+`
 
 const ColumnDescription = styled.p`
- 
-  margin-top: 1em;
+  display:inline;
   font-family: Open Sans;
   color: #4f4f4f;
-  vertical-align: middle;
 
   &:hover {
     cursor: pointer;
@@ -89,7 +99,8 @@ const Portfolio = (props) => {
               <ColoumnImage src={props.chillData[9].thumbnailLink} onClick={props.renderMarinerModal}></ColoumnImage>
             </Column>  
             
-            <Column>  
+            <Column>
+              <FirstWord onClick={props.renderMarinerModal}>{descriptions.marinerFirst}</FirstWord>  
               <ColumnDescription onClick={props.renderMarinerModal}>{descriptions.mariner}</ColumnDescription>
             </Column>          
           </Project>
@@ -98,7 +109,8 @@ const Portfolio = (props) => {
             <Column>
               <ColoumnImage src={props.chillData[10].thumbnailLink} onClick={props.renderCodeChatModal}></ColoumnImage>
             </Column>
-            <Column>  
+            <Column>
+               <FirstWord onClick={props.renderCodeChatModal}>{descriptions.codeChatFirst}</FirstWord>   
               <ColumnDescription onClick={props.renderCodeChatModal}>{descriptions.codeChat}</ColumnDescription>
             </Column> 
           </Project>    
@@ -106,7 +118,8 @@ const Portfolio = (props) => {
             <Column>
               <ColoumnImage src={props.chillData[11].thumbnailLink} onClick={props.renderCodeChatModal}></ColoumnImage>
             </Column>
-            <Column>  
+            <Column>
+               <FirstWord onClick={props.renderBrewHopModal}>{descriptions.brewHopFirst}</FirstWord>   
               <ColumnDescription onClick={props.renderBrewHopModal}>{descriptions.brewHop}</ColumnDescription>
             </Column>             
           </Project>      
