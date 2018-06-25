@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
 import styled from 'styled-components';
-import Profile from '../homePhotos/profile.png';
+import Profile from '../homePhotos/Alex_Profile_Shape.png';
 import descriptions from '../../descriptions/descriptions.js';
 
 export default class Home extends React.Component {
@@ -29,14 +29,12 @@ export default class Home extends React.Component {
       margin-right: 10%;
     `
 
-    const DescriptionContainer = styled.div`
-      display: inline;   
-    `
+    
 
     const SkillList = styled.ul`
       max-width: 30% {
         .flex-grid {
-          display: block
+          display: flex;
         }
       }
       list-style-type: none;
@@ -46,22 +44,26 @@ export default class Home extends React.Component {
 
     const Skills = styled.li`
       display: inline-block;
-      padding: 2%;
+      padding: 3%;
+      color: #4f4f4f;
     `
     const SkillTitle = styled.h1`
       display: inline;
       margin-right: 60%;
       margin-left: 40%;
       font-family: Open Sans;
+      color: #4f4f4f;
     `
 
     const AboutMeTitle = styled.h1`
       display: inline;
       font-family: Open Sans;
+      color: #4f4f4f;
     `
 
     const AboutMeDescription = styled.p`
       font-family: Open Sans;
+      color: #4f4f4f;
     `
 
     

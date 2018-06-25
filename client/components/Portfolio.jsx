@@ -7,31 +7,37 @@ import CodeChatModal from './modals/CodeChatModal.jsx';
 import BrewHopModal from './modals/BrewHopModal.jsx';
 
 const Backdrop = styled.div`
-  background-color: #D1D1D1;
+  
 `
 
 
-const Title = styled.div`
+const Title = styled.h1`
+  display: inline-block;
   font-family: Open Sans;
   font-size: 150%;
   font-weight: 600;
-  margin-left: 7%;
+  margin-left: 50%;
+  margin-right: 50%;
+  white-space: nowrap;
 `
 
 const Project = styled.div`
   display: grid;
   grid-template-columns: 30% 70%;
   margin-bottom: 1em;
+  margin-top: 1em;
 
 `
 
 const Logo = styled.img`
-  
+  display: inline;  
   
 `
 const Description =styled.p`
-  margin-top: initial;
+  display: inline;
+  margin-top: 1em;
   font-family: Open Sans;
+  color: #4f4f4f;
 `
 
 
@@ -56,18 +62,19 @@ const Portfolio = (props) => {
       />  
 
       <Backdrop dismissModal={props.dismissModalHandler}>
-          <Title>Mariner</Title> 
-          <Project>             
-              <Logo src={props.chillData[3].thumbnailLink} onClick={props.renderMarinerModal}></Logo>
-              <Description>{descriptions.mariner}</Description>         
-          </Project>
-        
-          <Title>Code Chat</Title>
           <Project>
-            <Logo src={props.chillData[4].thumbnailLink} onClick={props.renderCodeChatModal}></Logo>
-            <Description>{descriptions.codeChat}</Description>
+              <div>             
+                <Logo src={props.chillData[0].thumbnailLink} onClick={props.renderMarinerModal}></Logo>
+              </div>
+              <div>  
+                <Description>{descriptions.mariner}</Description>
+              </div>           
           </Project>
-          <Title>Brew Hop</Title>        
+      
+          <Project>
+            <Logo src={props.chillData[1].thumbnailLink} onClick={props.renderCodeChatModal}></Logo>
+            <Description>{descriptions.codeChat}</Description>
+          </Project>    
           <Project>
             <Logo src={props.chillData[2].thumbnailLink} onClick={props.renderBrewHopModal}></Logo>
             <Description>{descriptions.brewHop}</Description>

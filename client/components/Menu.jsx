@@ -8,12 +8,14 @@ export default class Menu extends React.Component {
       display: flex;
       height: 80px;
       flex-direction: row-reverse;
+      background-color: lightblue;
       padding-right: 3%;
       a{
         padding-right: 2%;
         color: black;
         text-decoration: none;
       }
+      font-family: Open Sans;
     `;
 
 
