@@ -34,13 +34,24 @@ const MarinerImage = styled.img`
 `
 const Next = styled.a`
   display: inline;
+  font-family: Open Sans;
   margin-bottom: 100px;
-  margin-left: 90%;
+  margin-left: 85%;
+
+  &:hover {
+    cursor: pointer;
+  }
 `
 
 const Prev = styled.a`
   display: inline;
+  font-family: Open Sans;
+  margin-right: 5%;
   magin-bottom: 100px;
+
+  &:hover {
+    cursor: pointer;
+  }
 ` 
 
 

@@ -41,7 +41,8 @@ export default class App extends React.Component {
     this.setState({
       showMarinerModal: false,
       showCodeChatModal: false,
-      showBrewHopModal: false
+      showBrewHopModal: false,
+      imageTracker: 0
     });
   }
 

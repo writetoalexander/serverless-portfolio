@@ -41,6 +41,10 @@ const Column = styled.div`
 
 const ColoumnImage = styled.img`
   vertical-align: middle;
+
+  &:hover {
+    cursor: pointer;
+  }
 `
 
 
@@ -50,6 +54,10 @@ const ColumnDescription = styled.p`
   font-family: Open Sans;
   color: #4f4f4f;
   vertical-align: middle;
+
+  &:hover {
+    cursor: pointer;
+  }
 
 `
 
@@ -82,7 +90,7 @@ const Portfolio = (props) => {
             </Column>  
             
             <Column>  
-              <ColumnDescription>{descriptions.mariner}</ColumnDescription>
+              <ColumnDescription onClick={props.renderMarinerModal}>{descriptions.mariner}</ColumnDescription>
             </Column>          
           </Project>
       
@@ -91,7 +99,7 @@ const Portfolio = (props) => {
               <ColoumnImage src={props.chillData[10].thumbnailLink} onClick={props.renderCodeChatModal}></ColoumnImage>
             </Column>
             <Column>  
-              <ColumnDescription>{descriptions.codeChat}</ColumnDescription>
+              <ColumnDescription onClick={props.renderCodeChatModal}>{descriptions.codeChat}</ColumnDescription>
             </Column> 
           </Project>    
           <Project>
@@ -99,7 +107,7 @@ const Portfolio = (props) => {
               <ColoumnImage src={props.chillData[11].thumbnailLink} onClick={props.renderCodeChatModal}></ColoumnImage>
             </Column>
             <Column>  
-              <ColumnDescription>{descriptions.codeChat}</ColumnDescription>
+              <ColumnDescription onClick={props.renderBrewHopModal}>{descriptions.brewHop}</ColumnDescription>
             </Column>             
           </Project>      
       </Backdrop>
