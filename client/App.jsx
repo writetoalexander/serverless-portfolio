@@ -3,6 +3,7 @@ import axios from 'axios';
 import { Route } from 'react-router-dom';
 import styled from 'styled-components';
 import Home from './components/Home';
+import Contact from './components/Contact';
 import Portfolio from './components/Portfolio';
 import descriptions from '../descriptions/descriptions.js'
 import Menu from './components/Menu';
@@ -125,6 +126,12 @@ export default class App extends React.Component {
                    imageTracker={this.state.imageTracker}
                  /> }
              />
+              <Route
+                exact path="/contact"
+                render={routeProps =>
+                  <Contact 
+                  />}
+              />
          </AppContent>
       </AppContainer>
     )
