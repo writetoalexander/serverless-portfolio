@@ -9,6 +9,7 @@ const ModalContainer = styled.div`
   position: absolute; 
   height: 85%;
   width: 80%;
+  margin-top: -3%;
   margin-left: auto;
   margin-right: auto;
   left: 0;
@@ -19,15 +20,15 @@ const ModalContainer = styled.div`
   z-index: 500;
   transition: all 0.3s ease-out;
   -webkit-user-drag: element;
-  
+
 `
 
 const MarinerImage = styled.img`
   position: absolute;
-  max-width: 85%;
+  max-width: 80%;
   max-height: 85%;
   margin-top: 40px;
-  margin-left: 11%;
+  margin-left: 10%;
   margin-right 65%;
   left: 0;
   right: 0;
