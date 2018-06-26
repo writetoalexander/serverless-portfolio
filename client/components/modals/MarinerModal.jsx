@@ -6,9 +6,9 @@ import HighLevel from '../assets/High-Level-Architecture.png';
 import Graph from '../assets/saGraph.png';
 
 const ModalContainer = styled.div`
-  position: absolute;
-  width: 766px;
-  height: 829px;
+  position: absolute; 
+  height: 85%;
+  width: 80%;
   margin-left: auto;
   margin-right: auto;
   left: 0;
@@ -19,12 +19,13 @@ const ModalContainer = styled.div`
   z-index: 500;
   transition: all 0.3s ease-out;
   -webkit-user-drag: element;
+  
 `
 
 const MarinerImage = styled.img`
   position: absolute;
-  height: 500px;
-  width: 600px;
+  max-width: 85%;
+  max-height: 85%;
   margin-top: 40px;
   margin-left: 11%;
   margin-right 65%;
@@ -33,21 +34,33 @@ const MarinerImage = styled.img`
 
 `
 const Next = styled.a`
+
   display: inline;
   font-family: Open Sans;
-  margin-bottom: 100px;
-  margin-left: 85%;
 
   &:hover {
     cursor: pointer;
   }
 `
 
+const ToggleContainer = styled.div`
+  display: flex;
+  height: 20px;
+  flex-direction: row-reverse;
+  background-color: lightblue;
+  padding-right: 3%;
+  a{
+    padding-right: 2%;
+    color: black;
+    text-decoration: none;
+   }
+  font-family: Open Sans;  
+`
+
 const Prev = styled.a`
   display: inline;
   font-family: Open Sans;
-  margin-right: 5%;
-  magin-bottom: 100px;
+ 
 
   &:hover {
     cursor: pointer;
@@ -70,8 +83,10 @@ const Modal = (props) => (
         style={{
           opacity: props.isVisible ? '1' : '0'
         }}>
-        <Prev onClick={() => {props.decreaseImageTracker()}}>Prev</Prev>
-        <Next onClick={() => {props.increaseImageTracker()}}>Next</Next>
+        <ToggleContainer>       
+          <Next onClick={() => {props.increaseImageTracker()}}>Next</Next>
+          <Prev onClick={() => {props.decreaseImageTracker()}}>Prev</Prev>
+        </ToggleContainer>  
         <MarinerImage src={images[props.imageTracker]}>
         </MarinerImage>
       </ModalContainer>

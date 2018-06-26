@@ -4,9 +4,9 @@ import styled from 'styled-components';
 import BrewHop from '../assets/Brew-Hop.png';
 
 const ModalContainer = styled.div`
-  position: absolute;
-  width: 766px;
-  height: 829px;
+  position: absolute; 
+  height: 85%;
+  width: 80%;
   margin-left: auto;
   margin-right: auto;
   left: 0;
@@ -21,8 +21,8 @@ const ModalContainer = styled.div`
 
 const MarinerImage = styled.img`
   position: absolute;
-  height: 500px;
-  width: 600px;
+  max-width: 85%;
+  max-height: 85%;
   margin-top: 40px;
   margin-left: 11%;
   margin-right 65%;

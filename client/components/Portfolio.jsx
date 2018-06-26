@@ -27,6 +27,7 @@ const Project = styled.div`
   display: flex;
   flex-wrap: wrap;
   padding: 1em;
+  margin-right: 10%;
 `
 
 const Column = styled.div`
@@ -45,6 +46,8 @@ const ColoumnImage = styled.img`
   &:hover {
     cursor: pointer;
   }
+  margin-right: 0%;
+  margin-left: 15%
 `
 
 const FirstWord = styled.p`
@@ -110,16 +113,16 @@ const Portfolio = (props) => {
               <ColoumnImage src={props.chillData[10].thumbnailLink} onClick={props.renderCodeChatModal}></ColoumnImage>
             </Column>
             <Column>
-               <FirstWord onClick={props.renderCodeChatModal}>{descriptions.codeChatFirst}</FirstWord>   
+              <FirstWord onClick={props.renderCodeChatModal}>{descriptions.codeChatFirst}</FirstWord>   
               <ColumnDescription onClick={props.renderCodeChatModal}>{descriptions.codeChat}</ColumnDescription>
             </Column> 
           </Project>    
           <Project>
             <Column>
-              <ColoumnImage src={props.chillData[11].thumbnailLink} onClick={props.renderCodeChatModal}></ColoumnImage>
+              <ColoumnImage src={props.chillData[11].thumbnailLink} onClick={props.renderBrewHopModal}></ColoumnImage>
             </Column>
             <Column>
-               <FirstWord onClick={props.renderBrewHopModal}>{descriptions.brewHopFirst}</FirstWord>   
+              <FirstWord onClick={props.renderBrewHopModal}>{descriptions.brewHopFirst}</FirstWord>   
               <ColumnDescription onClick={props.renderBrewHopModal}>{descriptions.brewHop}</ColumnDescription>
             </Column>             
           </Project>      

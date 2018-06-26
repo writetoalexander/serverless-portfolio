@@ -22,8 +22,7 @@ export default class App extends React.Component {
     this.getAppData = this.getAppData.bind(this)
   }
 
-  componentDidMount(){
-    console.log('something happening')
+  componentWillMount(){
     this.getAppData()
   }
 
