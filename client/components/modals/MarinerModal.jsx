@@ -6,10 +6,10 @@ import HighLevel from '../assets/High-Level-Architecture.png';
 import Graph from '../assets/saGraph.png';
 
 const ModalContainer = styled.div`
-  position: absolute; 
+  position: fixed; 
   height: 85%;
   width: 80%;
-  margin-top: -3%;
+  margin-top: -5%;
   margin-left: auto;
   margin-right: auto;
   left: 0;

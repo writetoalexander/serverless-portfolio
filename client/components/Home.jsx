@@ -6,6 +6,7 @@ import descriptions from '../../descriptions/descriptions.js';
 
 export default class Home extends React.Component {
   render() {
+    
     const HomeContainer = styled.div`
       
     `;
@@ -65,12 +66,31 @@ export default class Home extends React.Component {
       font-family: Open Sans;
       color: #4f4f4f;
     `
+    const Name = styled.h2`
+      display: block;
+      margin-left: 10%;
+      margin-bottom: 0%;
+      font-family: Open Sans;
+      color: #4f4f4f;
+
+    `
+
+    const Title = styled.h3`
+      display: block;
+      margin-left: 10%;
+      margin-top: 0%;
+      font-family: Open Sans;
+      color: #4f4f4f;
+    `
 
     
 
 
     return (
       <HomeContainer>
+
+        <Name>Alex Boerschinger</Name>
+        <Title>Software Engineer</Title>
         <ProfilePic src={Profile}/>
         <InfoContainer>
           <div>
