@@ -9,7 +9,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --config webpack.prod.js",
-    "start": "webpack-dev-server --port 8080 --open --config webpack.prod.js"
+    "start": "webpack-dev-server --port 8080 --open --config webpack.prod.js",
+    "postinstall": "webpack --config webpack.prod.js"
   },
   "repository": {
     "type": "git",
