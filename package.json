@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "serverless portfolio",
   "engines": {
-    "node": "9.10.1"
+    "node": "9.10.1",
+    "npm": "6.1.0"
   },
   "main": "index.js",
   "scripts": {
