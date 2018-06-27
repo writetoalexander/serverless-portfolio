@@ -24,7 +24,7 @@ export default class App extends React.Component {
   }
 
   componentWillMount(){
-    this.getAppData()
+    this.getAppData();
   }
 
   getAppData() {
@@ -75,7 +75,6 @@ export default class App extends React.Component {
   }
 
   decreaseImageTracker() {
-    console.log('this.state.imageTracker is ', this.state.imageTracker)
     if(this.state.imageTracker !== 0) {
       this.setState({
         imageTracker: this.state.imageTracker - 1
