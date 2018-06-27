@@ -76,7 +76,6 @@ const ColumnDescription = styled.p`
 
 
 const Portfolio = (props) => {
-  console.log('props is ', props)
   return (
     <div>
       <MarinerModal 

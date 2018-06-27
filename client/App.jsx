@@ -31,9 +31,8 @@ export default class App extends React.Component {
 
     axios.get('https://kpuqymwzal.execute-api.us-east-1.amazonaws.com/enableCors/getDrives')
          .then(resp => {
-           console.log('resp is ', resp.data)
            this.setState({chillData: resp.data})
-         }, console.log('state is ', this.state))
+         })
 
   }
 
@@ -47,33 +46,32 @@ export default class App extends React.Component {
   }
 
   renderMarinerModal() {
-    console.log('click happening');
     this.setState({
       showMarinerModal: true
     });
   }
 
   renderCodeChatModal() {
-    console.log('cc click happening');
     this.setState({
       showCodeChatModal: true
     });
   }
 
   renderBrewHopModal() {
-    console.log('bh click happening')
     this.setState({
       showBrewHopModal: true
     });
   }
 
   increaseImageTracker() {
-    console.log('this.state.imageTracker is ', this.state.imageTracker)
     if (this.state.imageTracker !== 2) {
       this.setState({
         imageTracker: this.state.imageTracker + 1
       });
+    } else {
+      this.dismissModalHandler();
     }
+
   }
 
   decreaseImageTracker() {
@@ -82,6 +80,8 @@ export default class App extends React.Component {
       this.setState({
         imageTracker: this.state.imageTracker - 1
       });
+    } else {
+      this.dismissModalHandler();
     }
   }
 

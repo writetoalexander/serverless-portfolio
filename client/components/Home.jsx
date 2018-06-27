@@ -24,7 +24,7 @@ export default class Home extends React.Component {
 
     const InfoContainer = styled.div`
       display: grid;
-      grid-template-columns: 70% 30%;
+      grid-template-columns: 60% 40%;
       gap: 1em;
       margin-left: 10%;
       margin-right: 10%;
@@ -110,7 +110,10 @@ export default class Home extends React.Component {
               <Skills>HTML </Skills>
               <Skills>CSS </Skills>
               <Skills>AWS </Skills>
-              
+              <Skills>(EC2, </Skills>
+              <Skills>S3, </Skills>
+              <Skills>Lambda, </Skills>
+              <Skills>API Gateway) </Skills>
 
                
             </SkillList>
