@@ -8,11 +8,13 @@ const common = require('./webpack.common.js');
 const path = require('path');
 const CompressionPlugin = require('compression-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
 
 module.exports = merge(common, {
   watch: false,
   devtool: 'source-map',
   plugins: [
+    new CaseSensitivePathsPlugin(),
     new CompressionPlugin({
       asset: '[path].gz[query]',
       algorithm: 'gzip',
