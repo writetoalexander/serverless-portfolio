@@ -38,6 +38,7 @@ export default class Home extends React.Component {
           display: flex;
         }
       }
+      margin-top: 1%;
       list-style-type: none;
       font-family: Open Sans;
 
@@ -45,7 +46,7 @@ export default class Home extends React.Component {
 
     const Skills = styled.li`
       display: inline-block;
-      padding: 3%;
+      padding: 4%;
       color: #4f4f4f;
     `
     const SkillTitle = styled.h1`

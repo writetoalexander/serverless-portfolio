@@ -52,7 +52,7 @@ const ToggleContainer = styled.div`
   padding-right: 3%;
   a{
     padding-right: 2%;
-    color: black;
+    color: #4f4f4f;
     text-decoration: none;
    }
   font-family: Open Sans;  
@@ -61,7 +61,7 @@ const ToggleContainer = styled.div`
 const Prev = styled.a`
   display: inline;
   font-family: Open Sans;
- 
+
 
   &:hover {
     cursor: pointer;
