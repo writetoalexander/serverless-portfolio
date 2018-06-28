@@ -92,7 +92,7 @@ const Home = (props) => {
 
       <Name>Alex Boerschinger</Name>
       <Title>Software Engineer</Title>
-      <ProfilePic src={props.chillData[0].webContentLink}/>
+      <ProfilePic src={props.chillData[1].webContentLink}/>
       <InfoContainer>
         <div>
           <AboutMeTitle>About Me</AboutMeTitle>

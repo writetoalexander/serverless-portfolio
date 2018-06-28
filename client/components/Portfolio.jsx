@@ -101,7 +101,7 @@ const Portfolio = (props) => {
           <Project>
             <Column>
                           
-              <ColoumnImage src={props.chillData[11].thumbnailLink} onClick={props.renderMarinerModal}></ColoumnImage>
+              <ColoumnImage src={props.chillData[12].thumbnailLink} onClick={props.renderMarinerModal}></ColoumnImage>
             </Column>  
             
             <Column>
@@ -112,7 +112,7 @@ const Portfolio = (props) => {
       
           <Project>
             <Column>
-              <ColoumnImage src={props.chillData[12].thumbnailLink} onClick={props.renderCodeChatModal}></ColoumnImage>
+              <ColoumnImage src={props.chillData[13].thumbnailLink} onClick={props.renderCodeChatModal}></ColoumnImage>
             </Column>
             <Column>
               <FirstWord onClick={props.renderCodeChatModal}>{descriptions.codeChatFirst}</FirstWord>   
@@ -121,7 +121,7 @@ const Portfolio = (props) => {
           </Project>    
           <Project>
             <Column>
-              <ColoumnImage src={props.chillData[13].thumbnailLink} onClick={props.renderBrewHopModal}></ColoumnImage>
+              <ColoumnImage src={props.chillData[14].thumbnailLink} onClick={props.renderBrewHopModal}></ColoumnImage>
             </Column>
             <Column>
               <FirstWord onClick={props.renderBrewHopModal}>{descriptions.brewHopFirst}</FirstWord>   
