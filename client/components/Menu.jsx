@@ -4,7 +4,16 @@ import styled from 'styled-components';
 import LinkedIn from './assets/linkedIn.png'
 
 export default class Menu extends React.Component {
+  
+   constructor(props){
+    super(props);
+  }
+
+
+
   render() {
+    const props = props || null;
+
     const MenuContainer = styled.div`
       display: flex;
       height: 80px;
@@ -51,6 +60,8 @@ export default class Menu extends React.Component {
 
     `
 
+    
+    
 
     return (
       <MenuContainer>

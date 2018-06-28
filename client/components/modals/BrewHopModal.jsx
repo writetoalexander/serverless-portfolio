@@ -1,7 +1,7 @@
 import React from 'react';
 import Backdrop from '../backdrop/Backdrop.jsx';
 import styled from 'styled-components';
-import BrewHop from '../assets/Brew-Hop.png';
+//import BrewHop from '../assets/Brew-Hop.png';
 
 const ModalContainer = styled.div`
   position: fixed; 
@@ -42,7 +42,7 @@ const Modal = (props) => (
           opacity: props.isVisible ? '1' : '0'
         }}>
         
-        <MarinerImage src={BrewHop}>
+        <MarinerImage src={props.chillData[4].webContentLink}>
         </MarinerImage>
       </ModalContainer>
     </div>  

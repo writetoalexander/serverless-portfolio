@@ -31,8 +31,9 @@ export default class App extends React.Component {
 
     axios.get('https://kpuqymwzal.execute-api.us-east-1.amazonaws.com/enableCors/getDrives')
          .then(resp => {
+           console.log('resp is ', resp)
            this.setState({chillData: resp.data})
-         })
+         })      
 
   }
 
@@ -100,11 +101,14 @@ export default class App extends React.Component {
 
     return (
       <AppContainer>
-        <Menu/>
+        <Menu chillData={this.state.chillData}/>
         <AppContent>
              <Route
                exact path="/"
-               render={ routeProps => <Home {...routeProps} /> }
+               render={ routeProps => 
+                 <Home {...routeProps}
+                   chillData={this.state.chillData} 
+                 /> }
              />
 
              <Route

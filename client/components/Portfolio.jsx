@@ -76,7 +76,8 @@ const ColumnDescription = styled.p`
 
 
 const Portfolio = (props) => {
-  return (
+  if (props.chillData.length > 1) {
+    return (
     <div>
       <MarinerModal 
         chillData={props.chillData} 
@@ -86,10 +87,12 @@ const Portfolio = (props) => {
         decreaseImageTracker={props.decreaseImageTracker}
         imageTracker={props.imageTracker}/>
       <CodeChatModal
+        chillData={props.chillData}
         isVisible={props.showCodeChatModal}
         dismissModalHandler={props.dismissModalHandler}
       />
       <BrewHopModal
+        chillData={props.chillData}
         isVisible={props.showBrewHopModal}
         dismissModalHandler={props.dismissModalHandler}  
       />  
@@ -98,7 +101,7 @@ const Portfolio = (props) => {
           <Project>
             <Column>
                           
-              <ColoumnImage src={props.chillData[9].thumbnailLink} onClick={props.renderMarinerModal}></ColoumnImage>
+              <ColoumnImage src={props.chillData[11].thumbnailLink} onClick={props.renderMarinerModal}></ColoumnImage>
             </Column>  
             
             <Column>
@@ -109,7 +112,7 @@ const Portfolio = (props) => {
       
           <Project>
             <Column>
-              <ColoumnImage src={props.chillData[10].thumbnailLink} onClick={props.renderCodeChatModal}></ColoumnImage>
+              <ColoumnImage src={props.chillData[12].thumbnailLink} onClick={props.renderCodeChatModal}></ColoumnImage>
             </Column>
             <Column>
               <FirstWord onClick={props.renderCodeChatModal}>{descriptions.codeChatFirst}</FirstWord>   
@@ -118,7 +121,7 @@ const Portfolio = (props) => {
           </Project>    
           <Project>
             <Column>
-              <ColoumnImage src={props.chillData[11].thumbnailLink} onClick={props.renderBrewHopModal}></ColoumnImage>
+              <ColoumnImage src={props.chillData[13].thumbnailLink} onClick={props.renderBrewHopModal}></ColoumnImage>
             </Column>
             <Column>
               <FirstWord onClick={props.renderBrewHopModal}>{descriptions.brewHopFirst}</FirstWord>   
@@ -129,8 +132,11 @@ const Portfolio = (props) => {
     </div>
 
   )
+  } else {
+    return null;
+  }
+  
   
 }
 
 export default Portfolio
-

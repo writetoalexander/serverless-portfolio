@@ -22,7 +22,7 @@ exports.handler = (event, context, callback) => {
           return(err)
         } else {
           console.log('in else ')
-          console.log('res.data.items ', res.data.items)
+        
           let filteredResults = res.data.items.map( (el) => {
               return {
                         "title": el.title,
@@ -30,8 +30,9 @@ exports.handler = (event, context, callback) => {
                         "id": el.id,
                         "embedLink": el.embedLink,
                         "thumbnailLink": el.thumbnailLink,
+                        "webContentLink": el.webContentLink,
                         "createdDate": el.createdDate,
-                        "modifiedDate": el.modifiedDate,
+                        "modifiedDate": el.modifiedDate
                      }
           });
           console.log('filteredResults ', filteredResults)

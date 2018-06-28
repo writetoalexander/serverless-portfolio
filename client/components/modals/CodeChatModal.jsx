@@ -1,7 +1,7 @@
 import React from 'react';
 import Backdrop from '../backdrop/Backdrop.jsx';
 import styled from 'styled-components';
-import codeChat from '../assets/Code-Chat.png'
+
 
 const ModalContainer = styled.div`
   position: fixed; 
@@ -42,7 +42,7 @@ const Modal = (props) => (
           opacity: props.isVisible ? '1' : '0'
         }}>
         
-        <MarinerImage src={codeChat}>
+        <MarinerImage src={props.chillData[3].webContentLink}>
         </MarinerImage>
       </ModalContainer>
     </div>  
@@ -53,7 +53,6 @@ const Modal = (props) => (
 );
 
 export default Modal;
-
 
 
 
