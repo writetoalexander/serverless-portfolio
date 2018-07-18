@@ -1,7 +1,6 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
 import styled from 'styled-components';
-//import Profile from '../homePhotos/Alex_Profile_Shape.png';
 import descriptions from '../../descriptions/descriptions.js';
 
 
@@ -92,7 +91,7 @@ const Home = (props) => {
 
       <Name>Alex Boerschinger</Name>
       <Title>Software Engineer</Title>
-      <ProfilePic src={props.chillData[1].webContentLink}/>
+      <ProfilePic src={props.chillData[2].webContentLink}/>
       <InfoContainer>
         <div>
           <AboutMeTitle>About Me</AboutMeTitle>

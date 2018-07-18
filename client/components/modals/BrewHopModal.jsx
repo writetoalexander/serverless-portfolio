@@ -42,7 +42,7 @@ const Modal = (props) => (
           opacity: props.isVisible ? '1' : '0'
         }}>
         
-        <MarinerImage src={props.chillData[5].webContentLink}>
+        <MarinerImage src={props.chillData[6].webContentLink}>
         </MarinerImage>
       </ModalContainer>
     </div>  

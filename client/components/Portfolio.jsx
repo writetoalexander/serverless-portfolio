@@ -60,17 +60,26 @@ const FirstWord = styled.p`
   &:hover {
     cursor: pointer;
   }
+  vertical-align: middle;
 
 `
 
 const ColumnDescription = styled.p`
   display:inline;
+  margin-top: 1em;
   font-family: Open Sans;
   color: #4f4f4f;
 
   &:hover {
     cursor: pointer;
   }
+  vertical-align: middle;
+
+`
+
+const ParagraphContainer = styled.div`
+  margin-top: 2%;
+  vertical-align: middle;
 
 `
 
@@ -101,31 +110,37 @@ const Portfolio = (props) => {
           <Project>
             <Column>
                           
-              <ColoumnImage src={props.chillData[12].thumbnailLink} onClick={props.renderMarinerModal}></ColoumnImage>
+              <ColoumnImage src={props.chillData[13].thumbnailLink} onClick={props.renderMarinerModal}></ColoumnImage>
             </Column>  
             
             <Column>
-              <FirstWord onClick={props.renderMarinerModal}>{descriptions.marinerFirst}</FirstWord>  
-              <ColumnDescription onClick={props.renderMarinerModal}>{descriptions.mariner}</ColumnDescription>
+              <ParagraphContainer>
+                <FirstWord onClick={props.renderMarinerModal}>{descriptions.marinerFirst}</FirstWord>  
+                <ColumnDescription onClick={props.renderMarinerModal}>{descriptions.mariner}</ColumnDescription>
+              </ParagraphContainer>            
             </Column>          
           </Project>
       
           <Project>
             <Column>
-              <ColoumnImage src={props.chillData[13].thumbnailLink} onClick={props.renderCodeChatModal}></ColoumnImage>
+              <ColoumnImage src={props.chillData[14].thumbnailLink} onClick={props.renderCodeChatModal}></ColoumnImage>
             </Column>
             <Column>
-              <FirstWord onClick={props.renderCodeChatModal}>{descriptions.codeChatFirst}</FirstWord>   
-              <ColumnDescription onClick={props.renderCodeChatModal}>{descriptions.codeChat}</ColumnDescription>
+              <ParagraphContainer>
+                <FirstWord onClick={props.renderCodeChatModal}>{descriptions.codeChatFirst}</FirstWord>   
+                <ColumnDescription onClick={props.renderCodeChatModal}>{descriptions.codeChat}</ColumnDescription>
+              </ParagraphContainer>
             </Column> 
           </Project>    
           <Project>
             <Column>
-              <ColoumnImage src={props.chillData[14].thumbnailLink} onClick={props.renderBrewHopModal}></ColoumnImage>
+              <ColoumnImage src={props.chillData[15].thumbnailLink} onClick={props.renderBrewHopModal}></ColoumnImage>
             </Column>
             <Column>
-              <FirstWord onClick={props.renderBrewHopModal}>{descriptions.brewHopFirst}</FirstWord>   
-              <ColumnDescription onClick={props.renderBrewHopModal}>{descriptions.brewHop}</ColumnDescription>
+              <ParagraphContainer>
+                <FirstWord onClick={props.renderBrewHopModal}>{descriptions.brewHopFirst}</FirstWord>   
+                <ColumnDescription onClick={props.renderBrewHopModal}>{descriptions.brewHop}</ColumnDescription>
+              </ParagraphContainer>
             </Column>             
           </Project>      
       </Backdrop>

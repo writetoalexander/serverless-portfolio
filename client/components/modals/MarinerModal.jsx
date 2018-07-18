@@ -68,9 +68,9 @@ const Prev = styled.a`
  
 
 const Modal = (props) => {
-  const Graph = props.chillData[15].webContentLink;
-  const HighLevel = props.chillData[9].webContentLink;
-  const Diagram = props.chillData[7].webContentLink;
+  const Graph = props.chillData[0].webContentLink;
+  const HighLevel = props.chillData[10].webContentLink;
+  const Diagram = props.chillData[8].webContentLink;
   const images = [Graph, HighLevel, Diagram];
 
   return ( 

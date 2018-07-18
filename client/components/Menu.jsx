@@ -67,7 +67,7 @@ const Menu = (props) => {
           <NavLink to='/'>home</NavLink>
         </NavLinkContainer> 
         <LinkContainer href={'https://www.linkedin.com/in/alex-boerschinger/'}>
-          <LinkedInButton src={props.chillData[0].webContentLink}></LinkedInButton>
+          <LinkedInButton src={props.chillData[1].webContentLink}></LinkedInButton>
         </LinkContainer>
       </MenuContainer>
     )

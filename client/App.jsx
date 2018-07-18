@@ -31,7 +31,6 @@ export default class App extends React.Component {
 
     axios.get('https://kpuqymwzal.execute-api.us-east-1.amazonaws.com/enableCors/getDrives')
          .then(resp => {
-           console.log('resp is ', resp)
            this.setState({chillData: resp.data})
          })      
 
