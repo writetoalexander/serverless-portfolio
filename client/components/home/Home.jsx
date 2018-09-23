@@ -42,6 +42,8 @@ const InfoContainer = styled.div`
 
 const AboutContainer = styled.div`
   grid-area: aboutMeContainer;
+  display: flex;
+  flex-direction: column;
 `
     
 
@@ -70,9 +72,10 @@ const SkillTitle = styled.h1`
 `
 
 const AboutMeTitle = styled.h1`
-  display: inline;
+  align-self: center;
   font-family: Open Sans;
   color: #4f4f4f;
+  margin: 0;
 `
 
 const AboutMeDescription = styled.p`
