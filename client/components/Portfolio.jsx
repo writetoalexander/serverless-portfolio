@@ -34,7 +34,7 @@ const Column = styled.div`
   flex: 40%;
   max-width: 45%;
   padding: 1em;
-  @ media screen and (max-width: 200px) {
+  @media screen and (max-width: 200px) {
     flex: 90%;
     max-width: 90%;
   }

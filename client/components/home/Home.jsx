@@ -1,13 +1,13 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
 import styled from 'styled-components';
-import descriptions from '../../descriptions/descriptions.js';
+import descriptions from '../../../descriptions/descriptions.js';
 
 
   
     
 const HomeContainer = styled.div`
-
+      
 `;
 
 const ProfilePic = styled.img`
@@ -21,17 +21,28 @@ const ProfilePic = styled.img`
       
 `
 
+// const InfoContainer = styled.div`
+//   display: grid;
+//   grid-template-columns: 60% 40%;
+//   gap: 1em;
+//   margin-left: 10%;
+//   margin-right: 10%;
+//   @media (max-width 40rem) {
+    
+//   }
+// `
+
 const InfoContainer = styled.div`
   display: grid;
-  grid-template-columns: 60% 40%;
-  gap: 1em;
   margin-left: 10%;
   margin-right: 10%;
-  @media (max-width: 40rem) {
-    grid-template-columns: 100%;
-  }
+  grid-template-areas: "aboutMeContainer"
+                       "skillListContainer"  
 `
 
+const AboutContainer = styled.div`
+  grid-area: aboutMeContainer;
+`
     
 
 const SkillList = styled.ul`
@@ -43,7 +54,6 @@ const SkillList = styled.ul`
   margin-top: 1%;
   list-style-type: none;
   font-family: Open Sans;
-
 `
 
 const Skills = styled.li`
@@ -63,9 +73,6 @@ const AboutMeTitle = styled.h1`
   display: inline;
   font-family: Open Sans;
   color: #4f4f4f;
-  @media (max-width: 40rem) {
-    margin: auto;
-  }
 `
 
 const AboutMeDescription = styled.p`
@@ -78,7 +85,6 @@ const Name = styled.h2`
   margin-bottom: 0%;
   font-family: Open Sans;
   color: #4f4f4f;
-
 `
 
 const Title = styled.h3`
@@ -99,11 +105,11 @@ const Home = (props) => {
       <Title>Software Engineer</Title>
       <ProfilePic src={props.chillData[2].webContentLink}/>
       <InfoContainer>
-        <div>
+        <AboutContainer>
           <AboutMeTitle>About Me</AboutMeTitle>
           <AboutMeDescription>{descriptions.aboutMe}</AboutMeDescription>
 
-        </div>
+        </AboutContainer>
         <div>
           <SkillTitle>Skills</SkillTitle>  
           <SkillList>
@@ -135,7 +141,3 @@ const Home = (props) => {
 }
 
 export default Home;
-
-   
-  
-

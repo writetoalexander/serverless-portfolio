@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import { Route } from 'react-router-dom';
 import styled from 'styled-components';
-import Home from './components/Home';
+import Home from './components/home/Home';
 import Contact from './components/Contact';
 import Portfolio from './components/Portfolio';
 import descriptions from '../descriptions/descriptions.js'

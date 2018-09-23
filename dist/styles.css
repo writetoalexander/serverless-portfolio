@@ -1,0 +1,159 @@
+/*const HomeContainer = styled.div`
+
+`;
+
+const ProfilePic = styled.img`
+  display: block;
+  height: 300px;
+  width: auto;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right auto;
+      
+`
+
+const InfoContainer = styled.div`
+  display: grid;
+  grid-template-columns: 60% 40%;
+  gap: 1em;
+  margin-left: 10%;
+  margin-right: 10%;
+  @media (max-width: 40rem) {
+    grid-template-columns: 100%;
+  }
+`
+
+    
+
+const SkillList = styled.ul`
+  max-width: 30% {
+    .flex-grid {
+      display: flex;
+    }
+  }
+  margin-top: 1%;
+  list-style-type: none;
+  font-family: Open Sans;
+
+`
+
+const Skills = styled.li`
+  display: inline-block;
+  padding: 4%;
+  color: #4f4f4f;
+`
+const SkillTitle = styled.h1`
+  display: inline;
+  margin-right: 60%;
+  margin-left: 40%;
+  font-family: Open Sans;
+  color: #4f4f4f;
+`
+
+const AboutMeTitle = styled.h1`
+  display: inline;
+  font-family: Open Sans;
+  color: #4f4f4f;
+  @media (max-width: 40rem) {
+    margin: auto;
+  }
+`
+
+const AboutMeDescription = styled.p`
+  font-family: Open Sans;
+  color: #4f4f4f;
+`
+const Name = styled.h2`
+  display: block;
+  margin-left: 10%;
+  margin-bottom: 0%;
+  font-family: Open Sans;
+  color: #4f4f4f;
+
+`
+
+const Title = styled.h3`
+  display: block;
+  margin-left: 10%;
+  margin-top: 0%;
+  font-family: Open Sans;
+  color: #4f4f4f;
+`*/
+
+.homeContainer {
+
+}
+
+.profilePic {
+  display: block;
+  height: 300px;
+  width: auto;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.infoContainer {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  gap: 1em;
+  margin-left: 10%;
+  margin-right: 10%;
+  @media (max-width: 40rem) {
+    grid-template-columns: 100%;
+  }
+}
+
+.skillList {
+  margin-top: 1%;
+  list-style-type: none;
+  font-family: Open Sans;
+}
+
+.skills {
+  display: inline-block;
+  padding: 4%;
+  color: #4f4f4f;
+}
+
+.skillTitle {
+  display: inline;
+  margin-right: 60%;
+  margin-left: 40%;
+  font-family: Open Sans;
+  color: #4f4f4f;
+}
+
+.aboutMeTitle {
+  display: inline;
+  font-family: Open Sans;
+  color: #4f4f4f;
+}
+
+.aboutMeDescription {
+  font-family: Open Sans;
+  color: #4f4f4f;
+}
+
+.Name {
+  display: block;
+  margin-left: 10%;
+  margin-bottom: 0%;
+  font-family: Open Sans;
+  color: #4f4f4f;
+}
+
+.title {
+  display: block;
+  margin-left: 10%;
+  margin-top: 0%;
+  font-family: Open Sans;
+  color: #4f4f4f;
+}
+
+
+
+
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzdHlsZXMuY3NzIiwic291cmNlUm9vdCI6IiJ9*/
