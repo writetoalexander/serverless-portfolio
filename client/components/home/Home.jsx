@@ -25,13 +25,21 @@ const ProfilePic = styled.img`
 const InfoContainer = styled.div`
   display: grid;
   grid-template-areas: "aboutMeContainer"
-                       "skillListContainer"  
+                       "skillListContainer"; 
+  @media (min-width: 40rem) {
+    grid-template-areas: 30% 30% [col-3-start] 30%;
+  } 
 `
 
 const AboutContainer = styled.div`
   grid-area: aboutMeContainer;
   display: flex;
   flex-direction: column;
+   @media (min-width: 40rem) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+
 `
     
 const AboutMeTitle = styled.h1`
@@ -52,6 +60,12 @@ const SkillContainer = styled.div`
   grid-area: skillListContainer;
   display: flex;
   flex-direction: column;
+  @media (min-width: 40rem) {
+    grid-column-start: 3;
+    grid-row-start: 1;
+    margin-top: 0;
+    margin-left: 1rem;
+  }
 `
 
 
@@ -60,12 +74,18 @@ const Skills = styled.li`
   display: inline;
   padding: 2%;
   padding-left: 0;
+  padding-top: 0;
   color: #4f4f4f;
 `
 const SkillTitle = styled.h1`
   font-family: Open Sans;
   color: #4f4f4f;
   margin-bottom: 0;
+  @media(min-width: 40rem) {
+    margin-top: 0;
+    align-self: center;
+  }
+
 `
 
 const SkillList = styled.ul`
@@ -79,7 +99,6 @@ const SkillList = styled.ul`
 
 const Name = styled.h2`
   display: block;
-  margin-left: 10%;
   margin-bottom: 0%;
   font-family: Open Sans;
   color: #4f4f4f;
@@ -87,7 +106,6 @@ const Name = styled.h2`
 
 const Title = styled.h3`
   display: block;
-  margin-left: 10%;
   margin-top: 0%;
   font-family: Open Sans;
   color: #4f4f4f;
