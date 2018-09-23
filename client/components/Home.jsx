@@ -96,7 +96,7 @@ const Home = (props) => {
     <HomeContainer>
 
       <Name>Alex Boerschinger</Name>
-      <Title>Software Engineer</Title>
+      <Title>Software Engineers</Title>
       <ProfilePic src={props.chillData[2].webContentLink}/>
       <InfoContainer>
         <div>

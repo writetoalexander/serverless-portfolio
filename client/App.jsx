@@ -7,6 +7,7 @@ import Contact from './components/Contact';
 import Portfolio from './components/Portfolio';
 import descriptions from '../descriptions/descriptions.js'
 import Menu from './components/Menu';
+// comment reference
 
 export default class App extends React.Component {
   constructor(props){
