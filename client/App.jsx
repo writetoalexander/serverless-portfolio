@@ -7,7 +7,7 @@ import Contact from './components/Contact';
 import Portfolio from './components/Portfolio';
 import descriptions from '../descriptions/descriptions.js'
 import Menu from './components/Menu';
-// comment reference
+import MobileModal from './components/modals/MobileModal';
 
 export default class App extends React.Component {
   constructor(props){
@@ -15,6 +15,7 @@ export default class App extends React.Component {
     this.state = {
       chillData: [],
       descriptions: descriptions,
+      showMobileModal: false,
       showMarinerModal: false,
       showCodeChatModal: false,
       showBrewHopModal: false,
@@ -45,11 +46,25 @@ export default class App extends React.Component {
       imageTracker: 0
     });
   }
-
+ 
   renderMarinerModal() {
     this.setState({
       showMarinerModal: true
     });
+  }
+
+  renderMobileModal() {
+    console.log('mobile happening')
+    if (this.state.showMobileModal === false) {
+      this.setState({
+      showMobileModal: true
+    })
+    } else {
+      this.setState({
+        showMobileModal: false
+      })
+    }
+    
   }
 
   renderCodeChatModal() {
@@ -101,7 +116,10 @@ export default class App extends React.Component {
 
     return (
       <AppContainer>
-        <Menu chillData={this.state.chillData}/>
+        <Menu chillData={this.state.chillData} renderMobileModal={this.renderMobileModal.bind(this)} showMobileModal={this.state.showMobileModal}/>
+        <div>
+          <MobileModal isVisible={this.state.showMobileModal} renderMobileModal={this.renderMobileModal.bind(this)}/>
+        </div>
         <AppContent>
              <Route
                exact path="/"
@@ -117,6 +135,7 @@ export default class App extends React.Component {
                  <Portfolio {...routeProps}
                    chillData={this.state.chillData} 
                    descriptions={this.state.descriptions}
+                   showMobileModal={this.state.showMobileModal}
                    showMarinerModal={this.state.showMarinerModal}
                    showCodeChatModal={this.state.showCodeChatModal}
                    showBrewHopModal={this.state.showBrewHopModal}

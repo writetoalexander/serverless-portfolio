@@ -47,6 +47,7 @@ const AboutMeTitle = styled.h1`
   font-family: Open Sans;
   color: #4f4f4f;
   margin: 0;
+  
 `
 
 const AboutMeDescription = styled.p`
